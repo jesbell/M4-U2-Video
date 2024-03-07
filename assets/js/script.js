@@ -14,13 +14,13 @@ class Multimedia {
     };
 }
   
-//clase hija de clase Multimedia
+//Clase hija de clase Multimedia
 class Reproductor extends Multimedia {
     constructor(url, id) {
         super(url);
         this.id = id;
     }
-    //metodo playMultimedia
+    //método playMultimedia
     playMultimedia() {
         videos.reproduceVideo(this.getUrl(), this.id);
     }
@@ -34,7 +34,7 @@ class Reproductor extends Multimedia {
 
 //Implementando IIFE
 const videos= (() => {
-    //Función privada: inserta el video en la etiqueta frame
+    //Función privada: inserta el video en la etiqueta iframe
     const insertaVideo = (url, id) => {
         //Se utiliza setAttribute
         document.getElementById(id).setAttribute("src", url);
